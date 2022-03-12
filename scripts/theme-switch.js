@@ -21,6 +21,8 @@ themeSwitchBttn.forEach(button => {
   document.querySelector('.training-topic__title').classList.toggle('training-topic__title_theme_dark')
   document.querySelector('.training-topic__description').classList.toggle('training-topic__description_theme_dark')
   document.querySelector('.bikes-topic__title').classList.toggle('bikes-topic__title_theme_dark')
+  document.querySelector('.bikes-topic__shadow-provider').classList.toggle('bikes-topic__shadow-provider_theme_dark')
+  document.querySelectorAll('.bikes-topic__card-item').forEach(item => {item.classList.toggle('bikes-topic__card-item_theme_dark')})
   document.querySelectorAll('.bikes-topic__card-title').forEach(item => {item.classList.toggle('bikes-topic__card-title_theme_dark')})
   document.querySelectorAll('.bikes-topic__nav-item').forEach(item => {item.classList.toggle('bikes-topic__nav-item_theme_dark')}) 
   bikeTypeNavButton.forEach(item => {item.classList.remove('bikes-topic__nav-item_active')})

@@ -181,6 +181,12 @@
       box-shadow: -20px 60px 220px rgba(0, 0, 0, 0.44);
       border-radius: 20px;
     }
+
+    &_theme_dark {
+      @media (max-width: 906px) {
+        box-shadow: none;
+      }
+    }
   }
 
   &__card-list-wrapper {
@@ -231,6 +237,17 @@
       margin: 0;
       width: 100%;
     }
+
+    &_theme_dark {
+      @media (max-width: 906px) {
+      background-color: $lightbackgroundcolor;
+      border-radius: 20px;
+      }
+    }
+  }
+
+  &__card-href {
+    margin: 0 auto;
   }
 
   &__card-item_inactive {
@@ -296,7 +313,7 @@
     @include semiboldfont;
     font-size: 18px;
     line-height: 122%;
-    color: $lightfontcolorfortext;
+    color: $darkfontcolorfortext;
     margin: 0;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -309,7 +326,9 @@
     -webkit-box-orient: vertical;
 
     &_theme_dark {
-      color: $darkfontcolorforheading;
+      @media (max-width: 906px) {
+        color: $lightfontcolorforheading;
+      }
     }
 
     &_inactive {
