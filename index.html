@@ -1,12 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bikestore.ru</title>
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<body>
-  
+
+<body class="page">
+  <header class="header">
+    <button class="header__menu-open-button">
+      <img class="header__menu-open-button-image" src="./images/menu_open_button_element.svg" alt="Открыть меню">
+      <img class="header__menu-open-button-image" src="./images/menu_open_button_element.svg" alt="Открыть меню">
+      <img class="header__menu-open-button-image" src="./images/menu_open_button_element.svg" alt="Открыть меню">
+    </button>
+    <button class="header__menu-close-button"><img class="header__menu-close-button-image"
+        src="./images/menu_scroll_out.svg" alt="Закрыть меню"></button>
+    <ul class="header__nav">
+      <li class="header__list-item">
+        <a href="#terrain" class="header__link">Покрытия и градиенты</a>
+      </li>
+      <li class="header__list-item">
+        <a href="#bikes" class="header__link">Велосипеды</a>
+      </li>
+      <li class="header__list-item">
+        <a href="#training" class="header__link">Тренировки</a>
+      </li>
+    </ul>
+    <div class="theme-switch theme-switch_place_header ">
+      <img class="theme-switch__icon-bright" src="./images/button_icon_theme-light.svg" alt="Светлая тема страницы">
+      <button class="theme-switch__button">
+        <img class="theme-switch__theme-tumblr" src="./images/theme_button_tmblr.svg">
+      </button>
+      <img class="theme-switch__icon-dark" src="./images/button_icon_theme-dark.svg" alt="Темная тема страницы">
+    </div>
+  </header>
+  <main class="content">
+    <article class="general-topic">
+      <div class="popup">
+        <div class="popup__structure">
+          <h2 class="popup__title">#</h2>
+          <img class="popup__name-pointer" src="./images/popup-name-pointer.svg" alt="#">
+          <div class="popup__wrapper"><img class="popup__image" src="#" alt="#"></div>
+        </div>
+      </div>
+      <h1 class="general-topic__title">Шоссе, ТТ и Грэвел</h1>
+      <p class="general-topic__description">Триатлонные старты, горные серпантины или грейвел
+        заезды по живописным маршрутам – нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+      <a class="general-topic__link" href="#additional-topic"><button type="button" class="general-topic__button">Подробнее</button></a>
+      <img class="general-topic__image" src="./images/general_article_cover.jpg" alt="Фоновое изображение статьи">
+    </article>
+    <figure id="additional-topic" class="additional-topic">
+      <blockquote class="additional-topic__quote">
+        <p class="additional-topic__quote-content">«Катайся много или мало, долго или коротко, как хочешь - но катайся»
+        </p>
+      </blockquote>
+      <p class="additional-topic__quote-author">Эдди Меркс</p>
+      <p class="additional-topic__quote-author-subline">Велогонщик</p>
+      <img class="additional-topic__image" src="./images/additional__article_cover.jpg"
+        alt="Фоновое изображение статьи">
+    </figure>
+    <article id="terrain" class="terrain-topic article">
+      <h2 class="terrain-topic__title article__title">#</h2>
+      <p class="terrain-topic__description article__description">#</p>
+      <div class="terrain-topic__slider-wrapper">
+        <div class="terrain-topic__slider">
+
+        </div>
+        <img class="terrain-topic__map-background" src="./images/terrain_image_tag_background.svg" alt="#">
+        <img class="terrain-topic__map" src="#" alt="#">
+      </div>
+      <div class="pagination">
+        <button id="pagination-left" class="pagination__button"><img class="pagination__icon"
+            src="./images/pagination_left.svg" alt="Прокрутить влево"></button>
+        <button id="pagination-right" class="pagination__button"><img class="pagination__icon"
+            src="./images/pagination_right.svg" alt="Прокрутить вправо"></button>
+      </div>
+    </article>
+    <article id="bikes" class="article bikes-topic">
+      <h2 class="bikes-topic__title">Велосипеды</h2>
+      <div class="bikes-topic__shevron-wrapper">
+        <button class="bikes-topic__nav-button">
+          <img class="bikes-topic__shevron" src="./images/nav_folding_shevron.svg" alt="Развернуть меню">
+        </button>
+        <ul class="bikes-topic__nav bikes-topic__nav_folded">
+          <li data-track="highway" class="bikes-topic__nav-item"><a class="bikes-topic__nav-link">Шоссе</a></li>
+          <li data-track="gravel" class="bikes-topic__nav-item"><a class="bikes-topic__nav-link">Грэвел</a></li>
+          <li data-track="tt" class="bikes-topic__nav-item"><a class="bikes-topic__nav-link">TT</a></li>
+        </ul>
+      </div>
+      <div class="bikes-topic__shadow-provider">
+        <div class="bikes-topic__card-list-wrapper">
+          <ul class="bikes-topic__card-list">
+
+          </ul>
+        </div>
+      </div>
+      <div class="bikes-topic__card-toggler">
+        <img id="dot_one" class="bikes-topic__card-toggler-icon" src="#" alt="Следующее изображение">
+        <img id="dot_two" class="bikes-topic__card-toggler-icon" src="#" alt="Следующее изображение">
+        <img id="dot_three" class="bikes-topic__card-toggler-icon" src="#" alt="Следующее изображение">
+      </div>
+    </article>
+    <article id="training" class="article training-topic">
+      <h2 class="training-topic__title article__title">Тренировки</h2>
+      <p class="training-topic__description article__description">Чтобы найти маршрут для тренировки можно
+        воспользоваться сервисом Komoot, а записать эти тренировки поможет приложение Strava, а также это приложение
+        позволит построить тренировочный план.</p>
+      <ul class="article__filter training-topic__nav">
+        <li class="article__nav-item training-topic__nav-item"><a class=" training-topic__nav-link" target="_blank"
+            href="https://www.strava.com">Strava</a>
+        </li>
+        <li class="article__nav-item training-topic__nav-item"><a class="training-topic__nav-link" target="_blank"
+            href="https://www.komoot.com">Komoot</a>
+        </li>
+      </ul>
+      <img class="training-topic__image" src="./images/training_article_cover.jpg" alt="Фоновое изображение статьи">
+    </article>
+  </main>
+  <footer class="footer">
+    <h2 class="footer__title">Подпишитесь на рассылку&nbsp;—</h2>
+    <div class="footer__credentials">
+      <input class="footer__user-subscription" type="email" name="user-subscription" id="user-subscription"
+        placeholder="Ваш e-mail">
+      <button type="button" class="footer__submit-button footer__submit-button_disabled">ok</button>
+    </div>
+    <p class="footer__copyright">&copy; Road Club 2021</p>
+    <div class="theme-switch theme-switch_place_footer">
+      <img class="theme-switch__icon-bright" src="./images/button_icon_theme-light.svg" alt="Светлая тема страницы">
+      <button class="theme-switch__button">
+        <img class="theme-switch__theme-tumblr" src="./images/theme_button_tmblr.svg">
+      </button>
+      <img class="theme-switch__icon-dark" src="./images/button_icon_theme-dark.svg" alt="Темная тема страницы">
+    </div>
+    <img class="logo logo_place_footer" src="./images/logo_footer_less1084px.svg" alt="Логотип создателей сайта">
+  </footer>
+  <template id="bikes-cards">
+    <li class="bikes-topic__card-item">
+      <a class="bikes-topic__card-href" target="_blank" href="#">
+        <div class="bikes-topic__card-wrapper">
+          <img class="bikes-topic__card-image" src="#" alt="#">
+        </div>
+      </a>
+      <div class="bikes-topic__text-wrapper">
+        <span class="bikes-topic__card-title">#</span>
+      </div>
+    </li>
+  </template>
+  <script src="./scripts/bycicle-credentials.js" defer></script>
+  <script src="./scripts/terrain-cards.js" defer></script>
+  <script src="./scripts/theme-switch.js" defer></script>
+  <script src="./scripts/folder-nav.js" defer></script>
+  <script src="./scripts/bikes-nav.js" defer></script>
+  <script src="./scripts/bike-card-slider.js" defer></script>
 </body>
+
 </html>

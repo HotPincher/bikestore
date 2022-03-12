@@ -1,0 +1,10 @@
+.page {
+  max-width: 1440px;
+  min-width: 320px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 12px auto 12px;
+  grid-template-rows: 74px auto 424px;
+  grid-template-areas: "head head head" " . main . " "footer footer footer";
+  margin: 0 auto;
+}/*# sourceMappingURL=page.css.map */

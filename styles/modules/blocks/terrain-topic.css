@@ -1,0 +1,41 @@
+.terrain-topic__slider-wrapper {
+  height: 400px;
+  position: relative;
+  box-sizing: content-box;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+.terrain-topic__slider {
+  border: 1px solid red;
+  width: 100%;
+  max-width: 1300px;
+  height: 400px;
+  /* aspect-ratio: 1000 / 325; */
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+.terrain-topic__image {
+  max-width: 690px;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all ease 1s;
+  z-index: 1;
+}
+.terrain-topic__map-background {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 2;
+}
+.terrain-topic__map {
+  position: absolute;
+  left: 35px;
+  bottom: 32px;
+  z-index: 3;
+}/*# sourceMappingURL=terrain-topic.css.map */
