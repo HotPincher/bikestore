@@ -13,8 +13,8 @@ themeSwitchBttn.forEach(button => {
   document.querySelector('.footer__copyright').classList.toggle('footer__copyright_theme_dark')
   document.querySelector('.footer__user-email-input').classList.toggle('footer__user-email-input_theme_dark')
   document.querySelector('.footer__submit-button').classList.toggle('footer__submit-button_theme_dark')
-  document.querySelector('.theme-switch__icon-bright').classList.toggle('theme-switch__icon-bright_theme_dark');
-  document.querySelector('.theme-switch__icon-dark').classList.toggle('theme-switch__icon-dark_theme_dark');
+  document.querySelectorAll('.theme-switch__icon-bright').forEach(item => {item.classList.toggle('theme-switch__icon-bright_theme_dark')});
+  document.querySelectorAll('.theme-switch__icon-dark').forEach(item => {item.classList.toggle('theme-switch__icon-dark_theme_dark')});
   document.querySelector('.page').classList.toggle('page_theme_dark')
   document.querySelector('.footer').classList.toggle('footer_theme_dark')
   document.querySelector('.additional-topic__quote-content').classList.toggle('additional-topic__quote-content_theme_dark')
