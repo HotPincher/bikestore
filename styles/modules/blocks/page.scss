@@ -10,6 +10,8 @@
   max-width: 1440px;
   min-width: 284px;
   background-color: $lightbackgroundcolor;
+  position: relative;
+  transition: all .3s linear;
 
   @media (max-width: 906px) {
     grid-template-columns: 18px auto 18px;

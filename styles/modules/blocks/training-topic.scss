@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: minmax(auto, 460px) minmax(auto, 580px);
   grid-template-rows: 120px auto 120px;
+  column-gap: 20px;
   justify-content: space-between;
   margin-right: 120px;
 
@@ -107,7 +108,7 @@
     font-size: 18px;
     line-height: 156%;
     text-decoration: none;
-    color: $lightfontcolorfortext;
+    color: $lightfontcolorforheading;
 
     &:hover {
       cursor: pointer;

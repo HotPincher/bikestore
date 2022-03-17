@@ -18,7 +18,6 @@ navOpenButton.addEventListener('click', () => {
   document.querySelector('.theme-switch_place_header').classList.remove('theme-switch_place_header_folded')
 })
 
-
 navCloseButton.addEventListener('click', () => {
   navCloseButton.classList.add('header__menu-close-button_disabled')
   navOpenButton.classList.remove('header__menu-open-button_disabled')

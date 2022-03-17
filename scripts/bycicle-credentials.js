@@ -1,55 +1,55 @@
 const bikeElements = [
   {
     name: "Cervelo Caledonia-5",
-    link: "./images/bike_Cervelo Caledonia-5.jpg",
+    link: "./images/bike_Cervelo_Caledonia-5.jpg",
     data: 'highway',
-    href: 'https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN ',
+    href: 'https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN',
   },
   {
     name: "Cannondale Systemsix Himod",
-    link: "./images/bike_Cannondale Systemsix Himod.jpg",
+    link: "./images/bike_Cannondale_Systemsix_Himod.jpg",
     data: 'highway',
     href: 'https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J',
   },
   {
     name: "Trek Domane SL-7",
-    link: "./images/bike_Trek Domane SL-7.jpg",
+    link: "./images/bike_Trek_Domane_SL-7.jpg",
     data: 'highway',
     href: 'https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF',
   },
   {
     name: "Cervelo Aspero GRX 810",
-    link: "./images/bike_Cervelo Aspero GRX 810.jpg",
+    link: "./images/bike_Cervelo_Aspero_GRX_810.jpg",
     data: 'gravel',
     href: 'https://www.sigmasports.com/item/Cervelo/Aspero-GRX-810-1x-Disc-Gravel-Bike-2021/RJDE',
   },
   {
     name: "Specialized S-Works Diverge",
-    link: "./images/bike_Specialized S-Works Diverge.jpg",
+    link: "./images/bike_Specialized_S-Works_Diverge.jpg",
     data: 'gravel',
     href: 'https://www.sigmasports.com/item/Specialized/S-Works-Diverge-Gravel-Bike-2020/NVJ9'
   },
   {
     name: "Cannondale Topstone Lefty 3",
-    link: "./images/bike_Cannondale Topstone Lefty 3.jpg",
+    link: "./images/bike_Cannondale_Topstone_Lefty_3.jpg",
     data: 'gravel',
     href: 'https://www.sigmasports.com/item/Cannondale/Topstone-Carbon-Lefty-3-Disc-Gravel-Road-Bike-2021/PUC8'
   },
   {
     name: "Specialized S-Works Shiv",
-    link: "./images/bike_Specialized S-Works Shiv.jpg",
+    link: "./images/bike_Specialized_S-Works_Shiv.jpg",
     data: 'tt',
     href: 'https://www.sigmasports.com/item/Specialized/S-Works-Shiv-Disc-Limited-Edition-Triathlon-Bike-2019/K8P9 '
   },
   {
     name: "BMC Timemachine 01 ONE",
-    link: "./images/bike_BMC Timemachine 01 ONE.jpg",
+    link: "./images/bike_BMC_Timemachine_01_ONE.jpg",
     data: 'tt',
     href: 'https://www.sigmasports.com/item/BMC/Timemachine-01-One-Force-Disc-TT-Triathlon-Bike-2021/S835'
   },
   {
     name: "Cervelo P-Series",
-    link: "./images/bike_Cervelo P-Series.jpg",
+    link: "./images/bike_Cervelo_P-Series.jpg",
     data: 'tt',
     href: 'https://www.sigmasports.com/item/Cervelo/P-Series-Ultegra-Di2-TT-Triathlon-Bike-2021/RM6Q'
   },
@@ -66,32 +66,23 @@ const bikeCardTemplate = document.querySelector('#bikes-cards');
 const bikeTypeNavButton = document.querySelectorAll('.bikes-topic__nav-item');
 const bikeTypeNavLink = document.querySelectorAll('.bikes-topic__nav-link');
 const bikeCardPopup = document.querySelector('.popup');
+const bikeCardPopupHref = document.querySelector('.popup__link')
 const bikeCardPopupImage = document.querySelector('.popup__image');
 const bikeCardPopupTitle = document.querySelector('.popup__title');
-
-activatePopUp = (popup) => {
-  popup.classList.add('popup_active')
-}
-
-removePopUp = (popup) => {
-  popup.classList.remove('popup_active')
-}
 
 renderBikeCard = item => {
   const bikeCardItem = bikeCardTemplate.content.querySelector('.bikes-topic__card-item').cloneNode(true);
   const bikeCardItemImage = bikeCardItem.querySelector('.bikes-topic__card-image');
   const bikeCardItemTitle = bikeCardItem.querySelector('.bikes-topic__card-title');
-  const bikeTypeHref = bikeCardItem.querySelector('.bikes-topic__card-href');
   bikeCardItem.setAttribute('data-track', `${item.data}`);
-  bikeTypeHref.href = `${item.href}`;
   bikeCardItemImage.src = `${item.link}`;
   bikeCardItemImage.alt = `${item.name}`;
   bikeCardItemTitle.textContent = `${item.name}`;
   bikeCardItem.addEventListener('click', () => {
+    bikeCardPopupHref.href = `${item.href}` 
     bikeCardPopupImage.src = `${item.link}`;
     bikeCardPopupImage.alt = `${item.name}`;
     bikeCardPopupTitle.textContent = `${item.name}`;
-    activatePopUp(bikeCardPopup)
   })
 
   return bikeCardItem

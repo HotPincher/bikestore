@@ -4,7 +4,7 @@
   margin: 0;
 
   &_place_header {
-    @media (max-width: 1440px) {
+    @media (max-width: 9440px) {
       display: none;
     }
 
@@ -66,13 +66,23 @@
   }
 
   &__icon-bright {
+    color: $lightfontcolorforcoryright;
     width: 28px;
     height: 28px;
+
+    &_theme_dark {
+      color: $lightfontcolorforcoryright;
+    }
   }
 
   &__icon-dark {
+    color: $lightfontcolorforcoryright;
     width: 19px;
     height: 19px;
+
+    &_theme_dark {
+      color: $themeswitcherthemedark;
+    }
   }
 
   &__theme-tumblr {
@@ -81,5 +91,6 @@
     border-radius: 9999px;
     background-color: $themeswitchcolor;
     box-shadow: 0px 0px 0px $lightfontcolorforheading;
+    transition: all 3s linear;
   }
 }

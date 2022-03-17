@@ -145,7 +145,7 @@ addMapImage = () => {
 contentChanger = () => {
   bikeCards.forEach(item => {item.classList.remove('bikes-topic__card-item_inactive')})
   bikeTypeNavButton.forEach(item => {item.classList.remove('bikes-topic__nav-item_active')})
-  bikeTypeNavButton.forEach(item => {item.classList.remove('bikes-topic__nav-item_theme_dark_active')})
+  bikeTypeNavButton.forEach(item => {item.classList.remove('bikes-topic__nav-item_active_theme_dark')})
   const currentTrack = terrainCardContainer.firstElementChild.dataset['track'];
   
   if (currentTrack === "highway") {
@@ -160,8 +160,8 @@ contentChanger = () => {
     
     bikeTypeNavButton.forEach(item => {
       if (item.dataset['track'] !== 'highway') {
-        if (item.classList.contains('bikes-topic__nav-item_theme_dark')) {
-        item.classList.add('bikes-topic__nav-item_theme_dark_active')
+        if (item.classList.contains('bikes-topic__nav-item_theme_dark') && item.classList.contains('bikes-topic__nav-item_active')) {
+        item.classList.add('bikes-topic__nav-item_active_theme_dark')
       } else {
         item.classList.add('bikes-topic__nav-item_active')
       }
@@ -180,8 +180,8 @@ contentChanger = () => {
      
      bikeTypeNavButton.forEach(item => {
       if (item.dataset['track'] !== 'gravel') {
-        if (item.classList.contains('bikes-topic__nav-item_theme_dark')) {
-        item.classList.add('bikes-topic__nav-item_theme_dark_active')
+        if (item.classList.contains('bikes-topic__nav-item_theme_dark') && item.classList.contains('bikes-topic__nav-item_active')) {
+        item.classList.add('bikes-topic__nav-item_active_theme_dark')
       } else {
         item.classList.add('bikes-topic__nav-item_active')
       }
@@ -200,8 +200,8 @@ contentChanger = () => {
     
     bikeTypeNavButton.forEach(item => {
       if (item.dataset['track'] !== 'tt') {
-        if (item.classList.contains('bikes-topic__nav-item_theme_dark')) {
-        item.classList.add('bikes-topic__nav-item_theme_dark_active')
+        if (item.classList.contains('bikes-topic__nav-item_theme_dark') && item.classList.contains('bikes-topic__nav-item_active')) {
+        item.classList.add('bikes-topic__nav-item_active_theme_dark')
       } else {
         item.classList.add('bikes-topic__nav-item_active')
       }

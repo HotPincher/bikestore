@@ -4,11 +4,16 @@
   justify-content: space-between;
   grid-area: header;
   padding: 0 120px;
+  background-color: $lightbackgroundcolor;
+  transition: all .3s linear;
 
   &_folded {
-    @media (max-width: 450px) {
-      height: 74px;
-    }
+    position: fixed;
+    left: 0;
+    right: 0;
+    max-height: 74px;
+    height: 100%;
+    z-index: 11;
   }
 
   &_unfolded {
@@ -16,14 +21,19 @@
       @include flexcolumn;
       align-items: center;
       justify-content: space-between;
-      height: 640px;
-      background-color: $lightbackgroundcolor;
-      position: absolute;
-      top: 0;
+      position: fixed;
       left: 0;
       right: 0;
-      z-index: 99;
+      max-height: 640px;
+      height: 100%;
+      background-color: $lightbackgroundcolor;
+      z-index: 11;
+      overflow: hidden;
     }
+  }
+
+  &_theme_dark {
+    background-color: $darkbackgroundcolor;
   }
 
   @media (max-width: 1280px) {
@@ -31,7 +41,7 @@
   }
 
   &__menu-open-button {
-    @media (max-width: 1440px) {
+    @media (max-width: 9440px) {
       display: none;
     }
 
@@ -61,6 +71,11 @@
     height: 3px;
     margin: 0;
     width: 100%;
+    color: $lightfontcolorforheading;
+
+    &_theme_dark {
+      color: $darkfontcolorforheading;
+    }
   }
 
   &__menu-close-button {
@@ -89,6 +104,11 @@
     width: 40px;
     height: 40px;
     margin: 0;
+    color: $lightfontcolorforheading;
+
+    &_theme_dark {
+      color: $darkfontcolorforheading;
+    }
   }
 
   &__nav {
@@ -131,7 +151,7 @@
   }
 
   &__link {
-    @include contentfont;
+    @include mediumfont;
     font-size: 14px;
     line-height: 129%;
     text-decoration: none;
@@ -149,7 +169,7 @@
     }
 
     &_theme_dark {
-      color: $darkfontcolorforcoryright;
+      color: $darkfontcolorforheading;
 
       &:hover {
         cursor: pointer;
