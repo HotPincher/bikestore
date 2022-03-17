@@ -16,36 +16,6 @@
     width: 50px;
     height: 50px;
 
-    &_left {
-      background-image: url(../../../images/pagination_left.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 7px 16px;
-
-      @media (max-width: 1084px) {
-      background-size: 4.5px 10px;
-    }
-
-      &_theme_dark {
-        background-image: url(../../../images/pagination_left_dark.svg);
-      }
-    }
-
-    &_right {
-      background-image: url(../../../images/pagination_right.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 7px 16px;
-      
-      @media (max-width: 1084px) {
-        background-size: 4.5px 10px;
-      }
-      
-      &_theme_dark {
-        background-image: url(../../../images/pagination_right_dark.svg);
-      }
-    }
-
     &:nth-of-type(1) {
       margin-right: 20px;
       
@@ -65,6 +35,21 @@
     @media (max-width: 1084px) {
       width: 24px;
       height: 24px;
+    }
+  }
+
+  &__button-image {
+    width: 7px;
+    height: 16px;
+    color: $lightfontcolorforheading;
+
+    @media (max-width: 1084px) {
+      width: 4.5px;
+      height: 10px;
+    }
+
+    &_theme_dark {
+      color: $darkfontcolorforheading;
     }
   }
 
