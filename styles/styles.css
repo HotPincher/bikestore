@@ -505,7 +505,6 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 1;
-  line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 .general-topic__popup-title_theme_dark {
@@ -1083,7 +1082,6 @@
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 1;
-  line-clamp: 1;
   -webkit-box-orient: vertical;
 }
 .bikes-topic__card-title_theme_dark {
@@ -1657,7 +1655,7 @@
   font-family: Inter, Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
-  size: 13px;
+  font-size: 13px;
   line-height: 28px;
   color: #151515;
   background-color: transparent;
