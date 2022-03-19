@@ -68,7 +68,7 @@ const bikeTypeNavLink = document.querySelectorAll('.bikes-topic__nav-link');
 const bikeCardPopup = document.querySelector('.popup');
 const bikeCardPopupHref = document.querySelector('.popup__link')
 const bikeCardPopupImage = document.querySelector('.popup__image');
-const bikeCardPopupTitle = document.querySelector('.popup__title');
+const bikeCardPopupTitle = document.querySelector('.general-topic__popup-title');
 
 renderBikeCard = item => {
   const bikeCardItem = bikeCardTemplate.content.querySelector('.bikes-topic__card-item').cloneNode(true);
@@ -87,10 +87,6 @@ renderBikeCard = item => {
 
   return bikeCardItem
 }
-
-bikeCardPopup.addEventListener('click', () => {
-  removePopUp(bikeCardPopup)
-})
 
 addCard = (link, name, data) => {
   const cardRenderer = renderBikeCard (link, name, data)

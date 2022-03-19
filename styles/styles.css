@@ -1,4 +1,4 @@
-@import url(../styles/vendor/fonts.css);
+@import "../styles/vendor/fonts.css";
 .page {
   margin: 0 auto;
   display: grid;
@@ -805,7 +805,6 @@
   margin-right: 120px;
   padding: 0;
   transition: all 0.5s linear;
-  position: absolute;
 }
 @media (max-width: 450px) {
   .bikes-topic__nav {
@@ -813,6 +812,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    position: absolute;
     justify-content: space-between;
     padding: 5px 0;
     overflow: hidden;

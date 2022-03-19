@@ -99,10 +99,12 @@
     margin-right: 120px;
     padding: 0;
     transition: all 0.5s linear;
-    position: absolute;
+    // position: absolute;
+    // right: 0;
 
     @media (max-width: 450px) {
       @include flexcolumn;
+      position: absolute;
       justify-content: space-between;
       padding: 5px 0;
       overflow: hidden;
