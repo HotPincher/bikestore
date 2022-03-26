@@ -1,0 +1,172 @@
+.footer {
+  grid-area: footer;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 120px minmax(auto, 360px) 1fr 120px;
+  grid-template-rows: max-content max-content;
+  background-color: $footercolor;
+  transition: all 0.3s linear;
+
+  @media (max-width: 906px) {
+    grid-template-columns: 16px auto 16px;
+    grid-template-rows: auto 144px;
+    width: 100%;
+  }
+
+  &_theme_dark {
+    background-color: $darkfootercolor;
+  }
+
+  &__title {
+    @include semiboldfont;
+    font-size: 24px;
+    line-height: 124%;
+    color: $lightfontcolorforheading;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: start;
+    align-self: start;
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    padding: 0;
+    max-width: 229px;
+
+    &_theme_dark {
+      color: $darkfontcolorforheading;
+    }
+  }
+
+  &__user-subscription {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: start;
+    align-self: start;
+    margin: 0;
+    margin-bottom: 180px;
+    padding: 0;
+    width: 100%;
+    max-width: 360px;
+    height: 50px;
+    position: relative;
+    border: none;
+  }
+
+  &__user-email-input {
+    @include mediumfont;
+    font-size: 13px;
+    line-height: 215%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    z-index: 6;
+    box-sizing: border-box;
+    border: 1px solid rgba(199, 199, 199, 0.5);
+    border-radius: 4px;
+    color: $lightfontcolorforheading;
+    background-color: $footercolor;
+    transition: all 0.3s linear;
+
+    &::placeholder{
+      color: $lightfontcolorfortext;
+      opacity: 0.7;
+    } 
+
+    &:focus {
+      outline: 1px solid $userinputoutlinecolor;
+      color: $lightfontcolorforheading;
+      z-index: 3;
+
+      &::placeholder{
+        color: $lightfontcolorforheading;
+        opacity: 1;
+      } 
+    }
+
+    &:invalid {
+      z-index: 6;
+    }
+
+    &_theme_dark {
+      background-color: $darkfootercolor;
+      color: $darkfontcolorforheading;
+
+      &::placeholder{
+        color: $darkfontcolorfortext;
+      } 
+
+      &:focus {
+        border: 1px solid rgba(125, 125, 125, 0.5);
+        color: $darkfontcolorforheading;
+        
+        &::placeholder{
+          color: $darkfontcolorforheading;
+        }
+      }
+    }
+
+    @media (max-width: 906px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__submit-button {
+    @include mediumfont;
+    font-size: 13px;
+    line-height: 28px;
+    color: $lightfontcolorforheading;
+    background-color: transparent;
+    border: none;
+    width: 16px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    z-index: 5;
+
+    &_theme_dark {
+      color: $darkfontcolorforheading;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:disabled {
+      display: none;
+    }
+  }
+
+  &__copyright {
+    @include semiboldfont;
+    font-size: 14px;
+    line-height: 140%;
+    color: $lightfontcolorforcoryright;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: start;
+    align-self: end;
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 60px;
+
+    &_theme_dark {
+      color: $darkfontcolorforcoryright;
+    }
+
+    @media (max-width: 906px) {
+      margin-bottom: 25px;
+    }
+  }
+}
